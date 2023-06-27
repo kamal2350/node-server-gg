@@ -15,7 +15,7 @@ export const addBillController =async(req,res)=>{
 // get All Bills
 export const getAllBills=async(req,res)=>{
     try {
-        const bills = await billModal.find();
+        const bills = await billModal.find().sort({date:-1});
         res.status(200).send(bills);
     } catch (error) {
         res.status(400).json(error);
