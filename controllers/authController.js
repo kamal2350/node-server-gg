@@ -40,12 +40,13 @@ export const loginUser = async(req,res)=>{
             const isMatch = await bcrypt.compare(password,user.password);
             
             if(isMatch){
-                console.log("hii");
+                
                 const {password,...others} = user._doc;
                 const token = jwt.sign({...others},process.env.TOKEN_KEY);
                 res.cookie('access_token',token,{
                     maxAge:86400000,
                     httpOnly:true,
+                    sameSite:'None'
     
                 }).status(200).json({...others})
                
