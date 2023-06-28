@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials:true,
-    origin:'https://green-groccers.netlify.app'
+    origin:true
 }));
 
 
