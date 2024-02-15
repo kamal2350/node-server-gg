@@ -1,5 +1,4 @@
 # Security Policy
-X-Content-Type-Options:"nosniff"
 ## Supported Versions
 
 Use this section to tell people about which versions of your project are
